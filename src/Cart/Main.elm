@@ -1,4 +1,4 @@
-import Cart.ProductList exposing (init, update, view)
+import ProductList exposing (init, update, view)
 import StartApp.Simple exposing (start)
 
 main =

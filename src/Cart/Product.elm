@@ -1,4 +1,4 @@
-module Cart.Product (Model, init, Action, update, view) where
+module Product (Model, init, Action, update, view) where
 
 import Html exposing (..)
 import Html.Attributes exposing (style)

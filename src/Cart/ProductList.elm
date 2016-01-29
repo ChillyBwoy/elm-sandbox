@@ -1,6 +1,6 @@
-module Cart.ProductList where
+module ProductList where
 
-import Cart.Product
+import Product
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -10,7 +10,7 @@ import Signal exposing (Address)
 -- MODEL
 
 type alias Model =
-  { products : List Cart.Product.Model }
+  { products : List Product.Model }
 
 init : Model
 init =
@@ -36,5 +36,16 @@ view : Address Action -> Model -> Html
 view address model =
   div []
     [ h1 [] [text "Cart"]
+    , Html.form []
+        [ label []
+            [ span [] [text "Name"]
+            , input [] []
+            ]
+        , label []
+            [ span [] [text "price"]
+            , input [] []
+            ]
+        , button [] [text "add"]
+        ]
     , ul [] []
     ]

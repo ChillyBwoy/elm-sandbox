@@ -1,5 +1,5 @@
 .DS_Store
 .editorconfig
-
+elm.js
 elm-stuff
 build/*
