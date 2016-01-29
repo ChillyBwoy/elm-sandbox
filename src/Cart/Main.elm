@@ -1,8 +1,5 @@
-module Cart where
-
 import Cart.ProductList exposing (init, update, view)
 import StartApp.Simple exposing (start)
-
 
 main =
   start

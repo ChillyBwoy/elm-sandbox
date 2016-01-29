@@ -1,6 +1,6 @@
-module ProductList where
+module Cart.ProductList where
 
-import Product
+import Cart.Product
 
 import Html exposing (..)
 import Html.Attributes exposing (..)
@@ -10,14 +10,11 @@ import Signal exposing (Address)
 -- MODEL
 
 type alias Model =
-  { products : List Product.Model }
-
+  { products : List Cart.Product.Model }
 
 init : Model
 init =
   { products = []}
-
-
 
 -- UPDATE
 
@@ -29,12 +26,15 @@ update : Action -> Model -> Model
 update action model =
   case action of
     Add ->
-      {}
+      model
 
     Remove ->
-      {}
+      model
 
 
-view : Address Action -> Product.Model -> Html
+view : Address Action -> Model -> Html
 view address model =
-  div [] [text ("lol")]
+  div []
+    [ h1 [] [text "Cart"]
+    , ul [] []
+    ]

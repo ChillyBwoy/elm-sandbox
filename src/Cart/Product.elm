@@ -1,6 +1,8 @@
-module Product (Model, init, Action, update, view) where
+module Cart.Product (Model, init, Action, update, view) where
 
 import Html exposing (..)
+import Html.Attributes exposing (style)
+import Html.Events exposing (onClick)
 
 -- MODEL
 
@@ -18,9 +20,21 @@ init name price =
 -- UPDATE
 type Action
   = Create
+  | Update
 
 update : Action -> Model -> Model
 update action model =
   case action of
     Create ->
-      {}
+      model
+    Update ->
+      model
+
+
+-- VIEW
+view : Signal.Address Action -> Model -> Html
+view address model =
+  div []
+    [ span [] [text model.name]
+    , span [] [text (toString model.price)]
+    ]
