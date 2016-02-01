@@ -6,7 +6,8 @@
     "source-directories": [
         ".",
         "./src",
-        "./src/Cart"
+        "./src/Cart",
+        "./src/Architecture/2"
     ],
     "exposed-modules": [],
     "dependencies": {
