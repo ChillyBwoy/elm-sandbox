@@ -1,7 +1,8 @@
 module Chat.User where
 
+import Uuid.Barebones exposing (uuidStringGenerator)
 import Html exposing (..)
-import Html.Attribute exposing (class)
+import Html.Attributes exposing (class)
 
 -- MODEL
 type alias Model =

@@ -1,7 +1,6 @@
 module Chat.Message where
 
-import Html exposing (..)
-import Html.Attributes exposing (class)
+import Date exposing (Date)
 
 import Chat.User
 
