@@ -5,9 +5,7 @@
     "license": "BSD3",
     "source-directories": [
         ".",
-        "./src",
-        "./src/Cart",
-        "./src/Architecture/2"
+        "./src"
     ],
     "exposed-modules": [],
     "dependencies": {
