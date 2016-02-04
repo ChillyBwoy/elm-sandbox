@@ -1,19 +1,19 @@
 module Chat.User where
 
-import Uuid.Barebones exposing (uuidStringGenerator)
+import Uuid exposing (Uuid)
 import Html exposing (..)
 import Html.Attributes exposing (class)
 
 -- MODEL
 type alias Model =
-  { uuid: String
+  { uuid: Uuid
   , email : String
   , is_anonymous : Bool
   }
 
-init : String -> Model
-init email' =
-  { uuid = ""
+init : Uuid -> String -> Model
+init uuid' email' =
+  { uuid = uuid'
   , email = email'
   , is_anonymous = True
   }
