@@ -1,20 +1,24 @@
 module Chat.Message where
 
 import Html exposing (..)
-import Date exposing (Date)
 
-import Chat.User
+import Chat.User as User
 
 -- MODEL
 type alias Model =
-  { uuid : String
-  , author : Chat.User.Model
+  { author : User.Model
   , body : String
-  , created_at : Date
+  , created_at : Int
   }
 
+init : User.Model -> String -> Model
+init author' body' =
+  { author = author'
+  , body = body'
+  , created_at = 0
+  }
 
-dateView : Date -> Html
+dateView : Int -> Html
 dateView d =
   div []
     [ span [] [text (toString d) ]]
@@ -24,7 +28,7 @@ view : Model -> Html
 view model =
   div []
     [ div []
-        [ Chat.User.view model.author
+        [ User.view model.author
         , dateView model.created_at ]
     , div [] [ text model.body ]
     ]
